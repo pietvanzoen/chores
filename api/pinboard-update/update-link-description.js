@@ -10,14 +10,11 @@ module.exports = function updateDescription(url) {
       if (!post) {
         return 'no post matching ' + url;
       }
-      if (post.extended && post.description) {
-        return 'Post already has required data';
-      }
       return Metascraper
         .scrapeUrl(url)
         .then((metadata) => {
           return pb.replacePost(_.merge({url}, post, {
-            description: post.description || metadata.title,
+            description: metadata.title,
             extended: post.extended || metadata.description
           }));
         });

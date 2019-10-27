@@ -1,6 +1,6 @@
 const Pinboard = require('./pinboard');
 const Metascraper = require('metascraper');
-const pb = new Pinboard({token: process.env.AUTH_CODE});
+const pb = new Pinboard({token: process.env.PINBOARD_TOKEN});
 const _ = require('lodash');
 
 module.exports = function updateDescription(url) {

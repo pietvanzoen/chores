@@ -1,23 +1,20 @@
 const updateLinkDescription = require('./update-link-description.js');
 
-module.exports.endpoint = (event, context, callback) => {
+module.exports.endpoint = (req, res) => {
 
-  const url = JSON.parse(event.body).url;
+  const url = JSON.parse(req.body).url;
 
   updateLinkDescription(url)
     .then(resp => {
-      callback(null, {
-        statusCode: 200,
-        body: JSON.stringify({
-          message: 'update completed',
-          response: resp
-        })
+      res.status(200).json({
+        message: `Updated pin: ${url}`,
+        resp
       });
     })
     .catch(err => {
-      callback(null, {
-        statusCode: 502,
-        body: JSON.stringify(err)
-      })
+      res.status(502).json({
+        message: 'something went wrong parsing the url',
+        error: err
+      });
     });
 };

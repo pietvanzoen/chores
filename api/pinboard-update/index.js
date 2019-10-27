@@ -1,8 +1,12 @@
 const updateLinkDescription = require('./update-link-description.js');
 
-module.exports.endpoint = (req, res) => {
+module.exports = (req, res) => {
 
   const url = JSON.parse(req.body).url;
+
+  if (!url) {
+    return res.status(400).json({ message: 'url is required for parsing' });
+  }
 
   updateLinkDescription(url)
     .then(resp => {

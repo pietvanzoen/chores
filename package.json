@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "lodash": "^4.17.15",
-    "metascraper": "^5.7.14",
+    "metascraper": "^1.0.0",
     "request": "^2.88.0",
     "request-promise-native": "^1.0.7"
   }

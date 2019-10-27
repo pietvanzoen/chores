@@ -5,7 +5,7 @@ module.exports = (req, res) => {
   try {
     const url = JSON.parse(req.body).url;
   } catch (error) {
-    res.status(400).json({ message: 'could not parse payload', errorMessage: error.toString() });
+    res.status(400).json({ message: 'could not parse payload', errorMessage: error.toString(), body: res.body });
     return;
   }
 

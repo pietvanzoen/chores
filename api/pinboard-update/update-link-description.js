@@ -8,10 +8,10 @@ module.exports = function updateDescription(url) {
     .then(resp => {
       const post = resp.posts[0];
       if (!post) {
-        return { message: 'no post matching ' + url };
+        return 'no post matching ' + url;
       }
       if (post.extended && post.description) {
-        return { message: 'Post already has required data' };
+        return 'Post already has required data';
       }
       return Metascraper
         .scrapeUrl(url)

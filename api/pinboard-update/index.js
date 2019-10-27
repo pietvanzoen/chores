@@ -33,7 +33,8 @@ module.exports = (req, res) => {
     .catch(err => {
       res.status(502).json({
         message: 'something went wrong parsing the url',
-        error: err
+        error: err.toString(),
+        url
       });
     });
 };

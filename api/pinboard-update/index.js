@@ -1,20 +1,25 @@
 const updateLinkDescription = require('./update-link-description.js');
 
-module.exports = (req, res) => {
+function validURL(str) {
+  var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
+    '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
+    '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
+    '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
+    '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
+    '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
+  return !!pattern.test(str);
+}
 
-  try {
-    const url = JSON.parse(req.body).url;
-  } catch (error) {
-    res.status(400).json({
-      message: 'could not parse payload',
-      errorMessage: error.toString(),
-      body: res.body
-    });
-    return;
-  }
+module.exports = (req, res) => {
+  const { url } = req.body;
 
   if (!url) {
     res.status(400).json({ message: 'url is required for parsing' });
+    return;
+  }
+
+  if (!validURL(url)) {
+    res.status(400).json({ message: 'invalid url', url });
     return;
   }
 

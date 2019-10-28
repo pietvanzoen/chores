@@ -1,7 +1,7 @@
 {
   "env": {
     "PINBOARD_TOKEN": "@pinboard-token"
-  }
+  },
   "routes": [
     { "src": "/", "status": 404 }
   ]

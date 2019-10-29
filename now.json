@@ -3,6 +3,6 @@
     "PINBOARD_TOKEN": "@pinboard-token"
   },
   "routes": [
-    { "src": "/", "status": 404 }
+    { "src": "/", "status": 302, "headers": { "Location": "https://piet.me" }  }
   ]
 }

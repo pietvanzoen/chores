@@ -2,7 +2,9 @@
   "env": {
     "PINBOARD_TOKEN": "@pinboard-token"
   },
+  "builds": [{ "src": "**/index.js", "use": "@now/node" }],
   "routes": [
-    { "src": "/", "status": 302, "headers": { "Location": "https://piet.me" }  }
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/index.js" }
   ]
 }

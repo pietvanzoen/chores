@@ -8,6 +8,10 @@ module.exports = (req, res) => {
     );
   }
 
+  if (req.headers.host === "img.piet.me") {
+    return redirect(res, `https://xn--vi8h.piet.me/${req.url}`);
+  }
+
   if (req.url === "/") {
     return redirect(res, "https://piet.me");
   }

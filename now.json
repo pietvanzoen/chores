@@ -1,5 +1,11 @@
 {
-  "alias": ["chores.piet.me", "scripts.piet.me", "img.piet.me"],
+  "alias": [
+    "chores.piet.me",
+    "scripts.piet.me",
+    "img.piet.me",
+    "www.pietvanzoen.com",
+    "pietvanzoen.com"
+  ],
   "env": {
     "PINBOARD_TOKEN": "@pinboard-token"
   },

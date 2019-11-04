@@ -1,26 +1,21 @@
-const { normalize } = require("path");
+const router = require("./router");
 
-module.exports = (req, res) => {
-  if (req.headers.host === "scripts.piet.me") {
-    return redirect(
-      res,
+module.exports = router({
+  "scripts.piet.me": (req, res) =>
+    res.redirect(
+      302,
       `https://raw.githubusercontent.com/pietvanzoen/scripts/master/${req.url}`
-    );
-  }
+    ),
 
-  if (req.headers.host === "img.piet.me") {
-    return redirect(res, `https://xn--vi8h.piet.me/${req.url}`);
-  }
+  "img.piet.me": (req, res) =>
+    res.redirect(301, `https://xn--vi8h.piet.me/${req.url}`),
 
-  if (req.url === "/") {
-    return redirect(res, "https://piet.me");
-  }
+  "www.pietvanzoen.com, pietvanzoen.com, www.piet.me": (req, res) =>
+    res.redirect(301, `https://piet.me/${req.url}`),
 
-  res.status(404).send("Not Found.");
-};
+  "chores.piet.me": (req, res) => {
+    if (req.url === "/") return res.redirect(301, "https://piet.me");
+  },
 
-function redirect(res, dest) {
-  const redirect = normalize(dest);
-  res.setHeader("Location", redirect);
-  return res.status(302).send(`Redirecting to ${redirect}`);
-}
+  default: (req, res) => res.status(404).send("Not found.")
+});

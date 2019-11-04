@@ -14,7 +14,7 @@ module.exports = router({
     res.redirect(301, `https://piet.me/${req.url}`),
 
   "chores.piet.me": (req, res) => {
-    if (req.url === "/") return res.redirect(301, "https://piet.me");
+    if (req.url === "/") return res.redirect(302, "https://piet.me");
   },
 
   default: (req, res) => res.status(404).send("Not found.")

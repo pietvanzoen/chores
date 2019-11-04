@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+normalize-url@^4.5.0:
+  version "4.5.0"
+  resolved "https://npm.staging.nxdev.nl/normalize-url/-/normalize-url-4.5.0.tgz#453354087e6ca96957bd8f5baf753f5982142129"
+  integrity sha512-2s47yzUxdexf1OhyRi4Em83iQk0aPvwTddtFz4hnSSw9dCEsLEGf6SwIO8ss/19S9iBb5sJaOuTvTGDeZI00BQ==
+
 prettier@^1.18.2:
   version "1.18.2"
   resolved "https://npm.staging.nxdev.nl/prettier/-/prettier-1.18.2.tgz#6823e7c5900017b4bd3acf46fe9ac4b4d7bda9ea"

@@ -1,4 +1,4 @@
-const { normalize } = require("path");
+const normalizeUrl = require("normalize-url");
 
 module.exports = function router(config) {
   const parsedConfig = {};
@@ -22,7 +22,7 @@ module.exports = function router(config) {
     }
 
     res.redirect = (code, url) => {
-      const normalizedUrl = normalize(url);
+      const normalizedUrl = normalizeUrl(url);
       res.setHeader("Location", normalizedUrl);
       return res.status(code).send(`Redirecting to ${normalizedUrl}`);
     };

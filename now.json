@@ -4,7 +4,8 @@
     "scripts.piet.me",
     "img.piet.me",
     "www.pietvanzoen.com",
-    "pietvanzoen.com"
+    "pietvanzoen.com",
+    "www.piet.me"
   ],
   "env": {
     "PINBOARD_TOKEN": "@pinboard-token"

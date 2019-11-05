@@ -26,11 +26,6 @@ ee-first@1.1.1:
   resolved "https://npm.staging.nxdev.nl/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
-"logger@file:./logger":
-  version "0.0.0"
-  dependencies:
-    morgan "^1.9.1"
-
 morgan@^1.9.1:
   version "1.9.1"
   resolved "https://npm.staging.nxdev.nl/morgan/-/morgan-1.9.1.tgz#0a8d16734a1d9afbc824b99df87e738e58e2da59"
@@ -47,11 +42,6 @@ ms@2.0.0:
   resolved "https://npm.staging.nxdev.nl/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
   integrity sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g=
 
-normalize-url@^4.5.0:
-  version "4.5.0"
-  resolved "https://npm.staging.nxdev.nl/normalize-url/-/normalize-url-4.5.0.tgz#453354087e6ca96957bd8f5baf753f5982142129"
-  integrity sha512-2s47yzUxdexf1OhyRi4Em83iQk0aPvwTddtFz4hnSSw9dCEsLEGf6SwIO8ss/19S9iBb5sJaOuTvTGDeZI00BQ==
-
 on-finished@~2.3.0:
   version "2.3.0"
   resolved "https://npm.staging.nxdev.nl/on-finished/-/on-finished-2.3.0.tgz#20f1336481b083cd75337992a16971aa2d906947"
@@ -63,11 +53,6 @@ on-headers@~1.0.1:
   version "1.0.2"
   resolved "https://npm.staging.nxdev.nl/on-headers/-/on-headers-1.0.2.tgz#772b0ae6aaa525c399e489adfad90c403eb3c28f"
   integrity sha512-pZAE+FJLoyITytdqK0U5s+FIpjN0JP3OzFi/u8Rx+EV5/W+JTWGXG8xFzevE7AjBfDqHv/8vL8qQsIhHnqRkrA==
-
-prettier@^1.18.2:
-  version "1.18.2"
-  resolved "https://npm.staging.nxdev.nl/prettier/-/prettier-1.18.2.tgz#6823e7c5900017b4bd3acf46fe9ac4b4d7bda9ea"
-  integrity sha512-OeHeMc0JhFE9idD4ZdtNibzY0+TPHSpSSb9h8FqtP+YnoZZ1sl8Vc9b1sasjfymH3SonAF4QcA2+mzHPhMvIiw==
 
 safe-buffer@5.1.2:
   version "5.1.2"

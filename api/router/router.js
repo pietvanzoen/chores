@@ -1,5 +1,5 @@
 const normalizeUrl = require("normalize-url");
-const logger = require("./logger");
+const logger = require("logger");
 
 module.exports = function router(config) {
   const parsedConfig = {};

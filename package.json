@@ -6,9 +6,5 @@
   },
   "devDependencies": {
     "prettier": "^1.18.2"
-  },
-  "dependencies": {
-    "logger": "file:./logger",
-    "normalize-url": "^4.5.0"
   }
 }

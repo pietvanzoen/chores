@@ -1,9 +1,14 @@
 {
   "name": "chores",
+  "private": true,
+  "scripts": {
+    "install:api": "find ./api -maxdepth 2 -name package.json | while read package; do (cd \"$(dirname $package)\"; echo \"==> Installing $package\"; yarn install); done"
+  },
   "devDependencies": {
     "prettier": "^1.18.2"
   },
   "dependencies": {
+    "morgan": "^1.9.1",
     "normalize-url": "^4.5.0"
   }
 }

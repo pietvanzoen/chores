@@ -1,4 +1,5 @@
 const normalizeUrl = require("normalize-url");
+const logger = require("./logger");
 
 module.exports = function router(config) {
   const parsedConfig = {};
@@ -13,7 +14,7 @@ module.exports = function router(config) {
     throw new TypeError("Missing default handler");
   }
 
-  return (req, res) => {
+  return logger((req, res) => {
     const defaultHandler = parsedConfig.default;
     const handler = parsedConfig[req.headers.host] || defaultHandler;
 
@@ -30,5 +31,5 @@ module.exports = function router(config) {
     if (!handler(req, res)) {
       defaultHandler(req, res);
     }
-  };
+  });
 };

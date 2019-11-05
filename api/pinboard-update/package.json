@@ -1,11 +1,13 @@
 {
   "name": "pinboard-update",
+  "version": "0.0.0",
   "main": "index.js",
   "engines": {
     "node": "10.x"
   },
   "dependencies": {
     "lodash": "^4.17.15",
+    "logger": "file:../../logger",
     "metascraper": "^1.0.0",
     "request": "^2.88.0",
     "request-promise-native": "^1.0.7"

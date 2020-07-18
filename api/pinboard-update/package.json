@@ -6,7 +6,7 @@
     "node": "10.x"
   },
   "dependencies": {
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "logger": "file:../../logger",
     "metascraper": "^1.0.0",
     "request": "^2.88.0",

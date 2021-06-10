@@ -3,6 +3,6 @@
   "version": "0.0.0",
   "dependencies": {
     "logger": "file:../../logger",
-    "normalize-url": "^4.5.0"
+    "normalize-url": "^4.5.1"
   }
 }
